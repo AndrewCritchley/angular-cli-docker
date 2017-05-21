@@ -9,6 +9,9 @@ docker run --rm -it \
    ng-cli \
    ng new $PROJECT_NAME 
 
+# Because angular-cli creates a new project in a sub-directory this will bring it back up
+# 	to the /app directory
+
 cd app/$PROJECT_NAME
 find . -maxdepth 1 -exec mv {} .. \;
 cd ../
